@@ -2,6 +2,7 @@
 /* load images here */
 function prepareInteraction() {
   //bgImage = loadImage('/images/background.png');
+  //where you load in images
 }
 
 function drawInteraction(faces, hands) {
@@ -12,25 +13,40 @@ function drawInteraction(faces, hands) {
     //console.log(hand);
     if (showKeypoints) {
       drawConnections(hand)
+      
     }
 
     // This is how to load in the x and y of a point on the hand.
+  
+    let pinkyFingerTipX = hand.pinky_finger_tip.x;
+    let pinkyFingerTipY = hand.pinky_finger_tip.y;
+
     let indexFingerTipX = hand.index_finger_tip.x;
     let indexFingerTipY = hand.index_finger_tip.y;
 
-    //  let pinkyFingerTipX = hand.pinky_finger_tip.x;
-    //  let pinkyFingerTipY = hand.pinky_finger_tip.y;
+    let ringFingerTipX = hand.ring_finger_tip.x;
+    let ringFingerTipY = hand.ring_finger_tip.y;
+
+    let middleFingerTipX = hand.middle_finger_tip.x;
+    let middleFingerTipY = hand.middle_finger_tip.y;
 
     /*
     Start drawing on the hands here
     */
+  
 
-    fill(225, 225, 0);
-    ellipse(indexFingerTipX, indexFingerTipY, 30, 30);
+   line(pinkyFingerTipX,pinkyFingerTipY,ringFingerTipX,ringFingerTipY)
+   line(ringFingerTipX,ringFingerTipY,middleFingerTipX,middleFingerTipY)
+   line(middleFingerTipX,middleFingerTipY,indexFingerTipX,indexFingerTipY)
+// line(pinkyfingerTipX,pinkyfingerTipY,indexFingerTipX,indexfingerTipY);
 
-    // drawPoints(hand)
 
-    //fingerPuppet(indexFingerTipX, indexFingerTipY);
+    // fill(225, 25, 0); //change colour of dot on finger
+    // ellipse(indexFingerTipX, pinkyFingerTipY, 30, 30);
+
+    //drawPoints(hand)
+
+   // fingerPuppet(indexFingerTipX, indexFingerTipY);
 
     //chameleonHandPuppet(hand)
 

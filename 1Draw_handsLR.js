@@ -26,12 +26,14 @@ function drawInteraction(faces, hands) {
     let whatGesture = detectHandGesture(hand)
 
     if (whatGesture == "Peace") {
-      fill(255, 38, 219) // pink
+      fill(255, 38, 9) // red
     }
     if (whatGesture == "Thumbs Up") {
       fill(255, 252, 48) // yellow
     }
-
+if (whatGesture == "Open Palm"){
+  fill(20,57,15)//dark green
+}
 
     if (hand.handedness === "Right") {
       rect(middleFingerMcpX, middleFingerMcpY, 100)
@@ -39,6 +41,11 @@ function drawInteraction(faces, hands) {
 
     if (hand.handedness === "Left") {
      ellipse(middleFingerMcpX, middleFingerMcpY, 100)
+     if(whatGesture=="Open Palm"){
+      strokeWeight(0)
+      fill(255, 252, 48) // yellow)
+     }
+     ellipse(middleFingerMcpX, middleFingerMcpY,50)
     }
     /*
     Stop drawing on the hands here
