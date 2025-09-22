@@ -27,6 +27,9 @@ function drawInteraction(faces, hands) {
 
     if (whatGesture == "Peace") {
       fill(255, 38, 9) // red
+      
+        ellipse(middleFingerMcpX,middleFingerMcpY,50,50)
+      
     }
     if (whatGesture == "Thumbs Up") {
       fill(255, 252, 48) // yellow

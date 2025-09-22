@@ -61,10 +61,13 @@ function drawInteraction(faces, hands) {
 
     let noseTipX = face.keypoints[4].x;
     let noseTipY = face.keypoints[4].y;
+
+    let foreheadX = face.keypoints[10].x;
+    let foreheadY = face.keypoints[10].y;
     /*
     Start drawing on the face here
     */
-    noStroke()
+  
     fill(225, 225, 0);
     // fill(get(leftEyeCenterX, leftEyeCenterY))
 
@@ -80,8 +83,8 @@ function drawInteraction(faces, hands) {
     // drawX(leftEyeCenterX,leftEyeCenterY);
 
 
-    // drawX(noseTipX,noseTipY); 
-
+    drawX(noseTipX,noseTipY); 
+drawX(foreheadX,foreheadY);
     // drawX(face.keypoints[332].x,face.keypoints[332].y);
     // drawX(face.keypoints[103].x,face.keypoints[103].y);
 
