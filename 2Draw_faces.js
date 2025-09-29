@@ -83,8 +83,10 @@ function drawInteraction(faces, hands) {
     // drawX(leftEyeCenterX,leftEyeCenterY);
 
 
-    drawX(noseTipX,noseTipY); 
-drawX(foreheadX,foreheadY);
+   drawX(noseTipX,noseTipY); 
+   drawFlower(foreheadX,foreheadY);
+   drawFlower(face.leftEye.centerX,face.leftEye.centerY)
+   drawFlower(face.rightEye.centerX,face.rightEye.centerY)
     // drawX(face.keypoints[332].x,face.keypoints[332].y);
     // drawX(face.keypoints[103].x,face.keypoints[103].y);
 
@@ -107,7 +109,13 @@ function drawX(X, Y) {
 
   pop()
 }
-
+function drawFlower(x,y,){
+  strokeWeight(2)
+  ellipse(x, y, 50, 10)
+  ellipse(x, y, 10, 50)
+  fill(20,200,200)
+  ellipse(x,y,10,10)
+}
 
 // This function draw's a dot on all the keypoints. It can be passed a whole face, or part of one. 
 function drawPoints(feature) {
