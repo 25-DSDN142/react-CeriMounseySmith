@@ -25,34 +25,35 @@ function drawInteraction(faces, hands) {
 
     let whatGesture = detectHandGesture(hand)
 
-    if (whatGesture == "Peace") {
-      fill(255, 38, 9) // red
-      
-        ellipse(middleFingerMcpX,middleFingerMcpY,50,50)
-      
-    }
-    if (whatGesture == "Thumbs Up") {
-      fill(255, 252, 48) // yellow
-    }
-if (whatGesture == "Open Palm"){
+if(hand.handedness === "Left"){
+if(whatGesture == "Open Palm"){
   fill(20,57,15)//dark green
+  ellipse(middleFingerMcpX, middleFingerMcpY,100)//plant filler 1for the moment
+}
+if(whatGesture == "Peace"){
+  fill(255)//light green?
+  ellipse(middleFingerMcpX, middleFingerMcpY,150)//Plant filler 2
 }
 
-    if (hand.handedness === "Right") {
-      rect(middleFingerMcpX, middleFingerMcpY, 100)
-    }
+}
 
-    if (hand.handedness === "Left") {
-     ellipse(middleFingerMcpX, middleFingerMcpY, 100)
-     if(whatGesture=="Open Palm"){
-      strokeWeight(0)
-      fill(255, 252, 48) // yellow)
-     }
-     ellipse(middleFingerMcpX, middleFingerMcpY,50)
-    }
-    /*
-    Stop drawing on the hands here
-    */
+if(hand.handedness === "Right"){
+if(whatGesture == "Open Palm"){
+fill(255,255,0)
+rect(middleFingerMcpX, middleFingerMcpY,100)//sun replacement for now
+}
+
+if(whatGesture == "Peace"){
+fill(0,0,255)
+rect(middleFingerMcpX, middleFingerMcpY,20)//water replacement for now
+}
+
+
+
+}
+
+    //Stop drawing on the hands here
+  
   }
   // You can make addtional elements here, but keep the hand drawing inside the for loop. 
   //------------------------------------------------------
