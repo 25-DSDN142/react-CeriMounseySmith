@@ -3,8 +3,14 @@
 // detectHandGesture(hand) returns "Pinch", "Peace", "Thumbs Up", "Pointing", "Open Palm", or "Fist"
 
 /* load images here */
+let myImage;
+
 function prepareInteraction() {
   //bgImage = loadImage('/images/background.png');
+  myImage = loadImage('flowerone.png');
+  myImagetwo = loadImage('plantone.png');
+  myImagethree = loadImage('sun.png');
+  myImagefour = loadImage('water.png');
 }
 
 function drawInteraction(faces, hands) {
@@ -12,7 +18,7 @@ function drawInteraction(faces, hands) {
   // for loop to capture if there is more than one hand on the screen. This applies the same process to all hands.
   for (let i = 0; i < hands.length; i++) {
     let hand = hands[i];
-    // console.log(hand);
+    //console.log(hand);
     if (showKeypoints) {
       drawConnections(hand)
     }
@@ -23,32 +29,29 @@ function drawInteraction(faces, hands) {
     Start drawing on the hands here
     */
 
-    let whatGesture = detectHandGesture(hand)
+let whatGesture = detectHandGesture(hand)
+
 
 if(hand.handedness === "Left"){
 if(whatGesture == "Open Palm"){
-  fill(20,57,15)//dark green
-  ellipse(middleFingerMcpX, middleFingerMcpY,100)//plant filler 1for the moment
+image(myImage,middleFingerMcpX-100,middleFingerMcpY-75,200,200);
 }
+
 if(whatGesture == "Peace"){
-  fill(255)//light green?
-  ellipse(middleFingerMcpX, middleFingerMcpY,150)//Plant filler 2
+  image(myImagetwo,middleFingerMcpX-100,middleFingerMcpY-75,200,200);
 }
 
 }
+
 
 if(hand.handedness === "Right"){
 if(whatGesture == "Open Palm"){
-fill(255,255,0)
-rect(middleFingerMcpX, middleFingerMcpY,100)//sun replacement for now
+image(myImagethree,middleFingerMcpX-100,middleFingerMcpY-75,200,200);
 }
 
 if(whatGesture == "Peace"){
-fill(0,0,255)
-rect(middleFingerMcpX, middleFingerMcpY,20)//water replacement for now
+  image(myImagefour,middleFingerMcpX-50,middleFingerMcpY-100,100,200);
 }
-
-
 
 }
 
