@@ -40,7 +40,7 @@ const  CaptureHeight = 720;
 
 // program Mode
 const webCam = false; // set to false to use video//set to true for your own webcam
-const videoFile = "hands1.mov" // update this to match the video file you want to load//on left 
+const videoFile = "hands video.mp4" // update this to match the video file you want to load//on left 
 const flipVideo = true; // changes from mirror mode to standard video mode
 
 

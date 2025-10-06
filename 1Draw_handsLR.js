@@ -25,11 +25,20 @@ function drawInteraction(faces, hands) {
 
     let middleFingerMcpX = hand.middle_finger_mcp.x;
     let middleFingerMcpY = hand.middle_finger_mcp.y;
+    let thumbMcpX = hand.thumb_mcp.x;
+    let thumbMcpY = hand.thumb_mcp.y;
+    let pinkyFingerTipX = hand.pinky_finger_tip.x;
+let pinkyFingerTipY = hand.pinky_finger_tip.y;
+
+
     /*
     Start drawing on the hands here
     */
 
 let whatGesture = detectHandGesture(hand)
+
+
+
 
 
 if(hand.handedness === "Left"){
@@ -54,6 +63,15 @@ if(whatGesture == "Peace"){
 }
 
 }
+
+// if(hand.handedness === "Left"){
+// checkifhandscloseTogether(hands);
+// if (ishandsClose){
+// image(myImage,hands.keypoints[9].x,hands.keypoint[9].y,400,400);
+// }
+// }
+
+
 
     //Stop drawing on the hands here
   
