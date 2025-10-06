@@ -50,6 +50,10 @@ if(whatGesture == "Peace"){
   image(myImagetwo,middleFingerMcpX-100,middleFingerMcpY-75,200,200);
 }
 
+if(whatGesture == "Thumbs Up"){
+//image
+}
+
 }
 
 
@@ -63,6 +67,38 @@ if(whatGesture == "Peace"){
 }
 
 }
+
+if (hand.handedness === "Right" && whatGesture == "Open Palm"){
+  // ellipse(width/2, height/2, 300);
+  if (hand.handedness === "Left" && whatGesture == "Open Palm"){
+      fill(200,200,100)
+      ellipse(width/2, height/2, 200);
+
+        // strokeWeight(10)
+        // ellipse(middleFingerMcpX+200,middleFingerMcpY,500,500)
+        // ellipse(width/2, height/2, 300);
+      } 
+    }
+  
+
+// ORIGINAL
+// if (hand.handedness === "Left"){
+//   if (whatGesture == "Open Palm"){
+//     if (hand.handedness === "Right"){
+//       if (hand.handedness === "Open Palm"){//change to peace or smth later 
+//         strokeWeight(10)
+//         fill(255)
+//         // ellipse(middleFingerMcpX+200,middleFingerMcpY,500,500)
+//         ellipse(width/2, height/2, 300);
+//       } 
+//     }
+//   }
+// }
+
+
+
+
+
 
 // if(hand.handedness === "Left"){
 // checkifhandscloseTogether(hands);
