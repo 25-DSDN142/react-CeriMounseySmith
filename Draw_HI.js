@@ -70,7 +70,7 @@ function drawInteraction(faces, hands) {
     strokeWeight(1)
     ellipse(L_indexFingerTipX, L_indexFingerTipY, 20);
     drawConnections(LH)
-    image(myImagethree,middleFingerMcpX-100,middleFingerMcpY-75,200,200);
+    
   }
 
   // Here you can draw just the right hand

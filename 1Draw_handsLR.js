@@ -7,23 +7,28 @@ let myImage;
 
 function prepareInteraction() {
   //bgImage = loadImage('/images/background.png');
+  //test images
   myImage = loadImage('flowerone.png');
   myImagetwo = loadImage('plantone.png');
   myImagethree = loadImage('sun.png');
   myImagefour = loadImage('water.png');
+  
+  //plant images
+  plantone = loadImage('Plant1.png');//echeveria succulent
+  planttwo = loadImage('Plant2.png');//echeveria succulent type 2
+  plantthree = loadImage('Plant3.png');//plant
+  plantfour = loadImage('Plant4.png');//monstera deliciosa
+  plantfive = loadImage('Plant5.png');//monstera
+  plantsix = loadImage('Plant6.png');//cactus
 
-  plantone = loadImage('Plant1.png');
-  planttwo = loadImage('Plant2.png');
-  plantthree = loadImage('Plant3.png');
-  plantfour = loadImage('Plant4.png');
-  plantfive = loadImage('Plant5.png');
-  plantsix = loadImage('Plant6.png');
-  plantonetext = loadImage('Plant1text.png');
-  planttwotext = loadImage('Plant2text.png');
-  plantthreetext = loadImage('Plant3text.png');
-  plantfourtext = loadImage('Plant4text.png');
-  plantfivetext = loadImage('Plant5text.png');
-  plantsixtext = loadImage('Plant6text.png');
+  //plant care instructions
+  plantonetext = loadImage('Plant1text.png');//echeveria succulent
+  planttwotext = loadImage('Plant2text.png');//echeveria succulent type 2
+  plantthreetext = loadImage('Plant3text.png');//plant
+  plantfourtext = loadImage('Plant4text.png');//monstera deliciosa
+  plantfivetext = loadImage('Plant5text.png');//monstera
+  plantsixtext = loadImage('Plant6text.png');//cactus
+
 }
 
 function drawInteraction(faces, hands) {
@@ -38,11 +43,6 @@ function drawInteraction(faces, hands) {
 
     let middleFingerMcpX = hand.middle_finger_mcp.x;
     let middleFingerMcpY = hand.middle_finger_mcp.y;
-    let thumbMcpX = hand.thumb_mcp.x;
-    let thumbMcpY = hand.thumb_mcp.y;
-    let pinkyFingerTipX = hand.pinky_finger_tip.x;
-let pinkyFingerTipY = hand.pinky_finger_tip.y;
-
 
     /*
     Start drawing on the hands here
@@ -51,75 +51,62 @@ let pinkyFingerTipY = hand.pinky_finger_tip.y;
 let whatGesture = detectHandGesture(hand)
 
 
-
-
-
 if(hand.handedness === "Left"){
+
 if(whatGesture == "Open Palm"){
-image(myImage,middleFingerMcpX-100,middleFingerMcpY-75,200,200);
+image(plantone,middleFingerMcpX-100,middleFingerMcpY-75,200,300);//echervira succulent
 }
 
 if(whatGesture == "Peace"){
-  image(myImagetwo,middleFingerMcpX-100,middleFingerMcpY-75,200,200);
+  image(planttwo,middleFingerMcpX-100,middleFingerMcpY-75,200,200);//echervira succulent type 2
 }
 
 if(whatGesture == "Thumbs Up"){
-//image
+ image(plantthree,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
 }
 
+if(whatGesture == "Pointing"){
+ image(plantfour,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+}
+
+if(whatGesture == "Pinch"){
+ image(plantfive,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+}
+
+if(whatGesture == "Fist"){
+ image(plantsix,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+}
 }
 
 
 if(hand.handedness === "Right"){
 if(whatGesture == "Open Palm"){
-image(myImagethree,middleFingerMcpX-100,middleFingerMcpY-75,200,200);
+image(plantonetext,middleFingerMcpX-100,middleFingerMcpY-75,200,200);
 }
+
 
 if(whatGesture == "Peace"){
-  image(myImagefour,middleFingerMcpX-50,middleFingerMcpY-100,100,200);
+  image(planttwotext,middleFingerMcpX-50,middleFingerMcpY-100,100,200);
+}
+if(whatGesture == "Thumbs Up"){
+ image(plantthreetext,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
 }
 
+
+if(whatGesture == "Pointing"){
+ image(plantfourtext,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
 }
 
-if (hand.handedness === "Right" && whatGesture == "Open Palm"){
-  // ellipse(width/2, height/2, 300);
-  if (hand.handedness === "Left" && whatGesture == "Open Palm"){
-      fill(200,200,100)
-      ellipse(width/2, height/2, 200);
 
-        // strokeWeight(10)
-        // ellipse(middleFingerMcpX+200,middleFingerMcpY,500,500)
-        // ellipse(width/2, height/2, 300);
-      } 
-    }
-  
-
-// ORIGINAL
-// if (hand.handedness === "Left"){
-//   if (whatGesture == "Open Palm"){
-//     if (hand.handedness === "Right"){
-//       if (hand.handedness === "Open Palm"){//change to peace or smth later 
-//         strokeWeight(10)
-//         fill(255)
-//         // ellipse(middleFingerMcpX+200,middleFingerMcpY,500,500)
-//         ellipse(width/2, height/2, 300);
-//       } 
-//     }
-//   }
-// }
+if(whatGesture == "Pinch"){
+ image(plantfivetext,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+}
 
 
-
-
-
-
-// if(hand.handedness === "Left"){
-// checkifhandscloseTogether(hands);
-// if (ishandsClose){
-// image(myImage,hands.keypoints[9].x,hands.keypoint[9].y,400,400);
-// }
-// }
-
+if(whatGesture == "Fist"){
+ image(plantsixtext,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+ }
+}
 
 
     //Stop drawing on the hands here
