@@ -11,6 +11,19 @@ function prepareInteraction() {
   myImagetwo = loadImage('plantone.png');
   myImagethree = loadImage('sun.png');
   myImagefour = loadImage('water.png');
+
+  plantone = loadImage('Plant1.png');
+  planttwo = loadImage('Plant2.png');
+  plantthree = loadImage('Plant3.png');
+  plantfour = loadImage('Plant4.png');
+  plantfive = loadImage('Plant5.png');
+  plantsix = loadImage('Plant6.png');
+  plantonetext = loadImage('Plant1text.png');
+  planttwotext = loadImage('Plant2text.png');
+  plantthreetext = loadImage('Plant3text.png');
+  plantfourtext = loadImage('Plant4text.png');
+  plantfivetext = loadImage('Plant5text.png');
+  plantsixtext = loadImage('Plant6text.png');
 }
 
 function drawInteraction(faces, hands) {
