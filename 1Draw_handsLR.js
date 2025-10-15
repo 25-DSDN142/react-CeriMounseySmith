@@ -4,15 +4,10 @@
 
 /* load images here */
 let myImage;
-
 function prepareInteraction() {
-  //bgImage = loadImage('/images/background.png');
-  //test images
-  myImage = loadImage('flowerone.png');
-  myImagetwo = loadImage('plantone.png');
-  myImagethree = loadImage('sun.png');
-  myImagefour = loadImage('water.png');
-  
+
+  bgImage = loadImage('Backgrounddsdn142.gif');
+
   //plant images
   plantone = loadImage('Plant1.png');//echeveria succulent
   planttwo = loadImage('Plant2.png');//echeveria succulent type 2
@@ -51,70 +46,66 @@ function drawInteraction(faces, hands) {
 let whatGesture = detectHandGesture(hand)
 
 
+
 if(hand.handedness === "Left"){
 
 if(whatGesture == "Open Palm"){
-image(plantone,middleFingerMcpX-100,middleFingerMcpY-75,200,300);//echervira succulent
+image(plantone,middleFingerMcpX-100,middleFingerMcpY-55,300,400);//echervira succulent
 }
 
 if(whatGesture == "Peace"){
-  image(planttwo,middleFingerMcpX-100,middleFingerMcpY-75,200,200);//echervira succulent type 2
+  image(planttwo,middleFingerMcpX-100,middleFingerMcpY-99,300,400);//echervira succulent type 2
 }
 
 if(whatGesture == "Thumbs Up"){
- image(plantthree,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+ image(plantthree,middleFingerMcpX-100,middleFingerMcpY-99,300,300)//peperomia argeyria
 }
 
 if(whatGesture == "Pointing"){
- image(plantfour,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+ image(plantfour,middleFingerMcpX-100,middleFingerMcpY-75,300,300)//monstera deliciosa
 }
 
 if(whatGesture == "Pinch"){
- image(plantfive,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+ image(plantfive,middleFingerMcpX-100,middleFingerMcpY-75,300,400)//monstera
 }
 
 if(whatGesture == "Fist"){
- image(plantsix,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+ image(plantsix,middleFingerMcpX-100,middleFingerMcpY-75,300,300)//cactus
 }
 }
 
 
 if(hand.handedness === "Right"){
 if(whatGesture == "Open Palm"){
-image(plantonetext,middleFingerMcpX-100,middleFingerMcpY-75,200,200);
+image(plantonetext,middleFingerMcpX-200,middleFingerMcpY-75,400,400);//echervira succulent care instructions
 }
 
 
 if(whatGesture == "Peace"){
-  image(planttwotext,middleFingerMcpX-50,middleFingerMcpY-100,100,200);
+  image(planttwotext,middleFingerMcpX-200,middleFingerMcpY-100,400,400);//echervira succulent type 2 care instructions
 }
+
 if(whatGesture == "Thumbs Up"){
- image(plantthreetext,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+ image(plantthreetext,middleFingerMcpX-200,middleFingerMcpY-75,400,400)//peperomia argeyria care instructions
 }
 
 
 if(whatGesture == "Pointing"){
- image(plantfourtext,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+ image(plantfourtext,middleFingerMcpX-200,middleFingerMcpY-75,400,400);//monstera deliciosa care instructions
 }
 
 
 if(whatGesture == "Pinch"){
- image(plantfivetext,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+ image(plantfivetext,middleFingerMcpX-200,middleFingerMcpY-75,400,400);//monstera care instructions
 }
 
 
 if(whatGesture == "Fist"){
- image(plantsixtext,middleFingerMcpX-100,middleFingerMcpY-75,200,200)
+ image(plantsixtext,middleFingerMcpX-200,middleFingerMcpY-75,400,400);//cactus care instructions
  }
 }
-
-
     //Stop drawing on the hands here
-  
   }
-  // You can make addtional elements here, but keep the hand drawing inside the for loop. 
-  //------------------------------------------------------
-
 }
 
 
